@@ -24,7 +24,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
     loginForm.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const { error, data } = await actions.loginAccount.safe(
+      const { error, data } = await actions.loginAccount(
         new FormData(loginForm)
       );
       if (error) {

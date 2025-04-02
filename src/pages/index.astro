@@ -19,7 +19,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
     logout.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const { error, data } = await actions.logoutAccount.safe();
+      const { error, data } = await actions.logoutAccount();
       if (error) {
         console.log(error);
         if (isInputError(error)) {

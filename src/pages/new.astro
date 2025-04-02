@@ -24,7 +24,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
     createForm.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const { error, data } = await actions.createAccount.safe(
+      const { error, data } = await actions.createAccount(
         new FormData(createForm)
       );
       if (error) {
